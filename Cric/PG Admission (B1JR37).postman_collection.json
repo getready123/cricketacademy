@@ -1,0 +1,1397 @@
+{
+	"info": {
+		"_postman_id": "55d41988-0a43-455b-83e7-0701a1bff912",
+		"name": "PG Admission (B1JR37)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Admin Signup",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"admin@company.com\",\n    \"userName\":\"admin\",\n    \"userMobileNumber\":\"8853421451\",\n    \"userPassword\":\"admin\",\n    \"userRetypePassword\":\"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/admin/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"admin@company.com\",\n    \"userPassword\":\"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/admin/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin Cloud",
+			"item": [
+				{
+					"name": "Admin Signup",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"admin@company.com\",\n    \"userName\":\"admin\",\n    \"userMobileNumber\":\"8853421451\",\n    \"userPassword\":\"admin\",\n    \"userRetypePassword\":\"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://pgadmission.herokuapp.com/admin/signup",
+							"protocol": "https",
+							"host": [
+								"pgadmission",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"admin",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "admin3@company.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://pgadmission.herokuapp.com/admin/login",
+							"protocol": "https",
+							"host": [
+								"pgadmission",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Institute",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"instituteName\" :\"RK Institute\",\n    \"instituteDescription\" : \"Great University to learn and grow.\",\n    \"instituteCity\" : \"Chennai\",\n    \"instituteState\" : \"Tamil Nadu\",\n    \"instituteEmail\" : \"rk@Institute.com\",\n    \"instituteMobile\" : \"9334578342\",\n    \"nirfRank\" : \"29\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://pgadmission.herokuapp.com/admin/addInstitute",
+							"protocol": "https",
+							"host": [
+								"pgadmission",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"admin",
+								"addInstitute"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Course",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"instituteId\" : \"2\",\n    \"courseName\" : \"M.COM\",\n    \"courseDescription\" : \"Masters in Commerce\",\n    \"courseDuration\" : \"2 Years\",\n    \"courseTiming\" : \"8:00 am to 4:00 pm\",\n    \"courseStudentCount\" : \"200\",\n    \"courseAcademicYear\" : \"2021\",\n    \"courseRequiredPercentage\" : \"60\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://pgadmission.herokuapp.com/admin/addCourse",
+							"protocol": "https",
+							"host": [
+								"pgadmission",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"admin",
+								"addCourse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Institutes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pgadmission.herokuapp.com/admin/viewInstitutes",
+							"protocol": "https",
+							"host": [
+								"pgadmission",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"admin",
+								"viewInstitutes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Institute",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pgadmission.herokuapp.com/admin/viewInstitute?instituteId=2",
+							"protocol": "https",
+							"host": [
+								"pgadmission",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"admin",
+								"viewInstitute"
+							],
+							"query": [
+								{
+									"key": "instituteId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Institute",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"instituteName\" :\"RK Institute\",\n    \"instituteDescription\" : \"Great University to learn and grow.\",\n    \"instituteCity\" : \"Chennai\",\n    \"instituteState\" : \"Tamil Nadu\",\n    \"instituteEmail\" : \"rk@Institute.com\",\n    \"instituteMobile\" : \"9334578342\",\n    \"nirfRank\" : \"45\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://pgadmission.herokuapp.com/admin/editInstitute?instituteId=1",
+							"protocol": "https",
+							"host": [
+								"pgadmission",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"admin",
+								"editInstitute"
+							],
+							"query": [
+								{
+									"key": "instituteId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Institute",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://pgadmission.herokuapp.com/admin/deleteInstitute?instituteId=2",
+							"protocol": "https",
+							"host": [
+								"pgadmission",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"admin",
+								"deleteInstitute"
+							],
+							"query": [
+								{
+									"key": "instituteId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pgadmission.herokuapp.com/admin/viewCourses",
+							"protocol": "https",
+							"host": [
+								"pgadmission",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"admin",
+								"viewCourses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Course",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pgadmission.herokuapp.com/admin/viewCourse?courseId=1",
+							"protocol": "https",
+							"host": [
+								"pgadmission",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"admin",
+								"viewCourse"
+							],
+							"query": [
+								{
+									"key": "courseId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Course",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"courseName\" : \"M.COM(Master)\",\n    \"courseDescription\" : \"Masters in Commerce\",\n    \"courseDuration\" : \"2 Years\",\n    \"courseTiming\" : \"8:00 am to 4:00 pm\",\n    \"courseStudentCount\" : \"200\",\n    \"courseAcademicYear\" : \"2021\",\n    \"courseRequiredPercentage\" : \"65\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://pgadmission.herokuapp.com/admin/editCourse?courseId=1",
+							"protocol": "https",
+							"host": [
+								"pgadmission",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"admin",
+								"editCourse"
+							],
+							"query": [
+								{
+									"key": "courseId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Course",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://pgadmission.herokuapp.com/admin/deleteCourse?courseId=1",
+							"protocol": "https",
+							"host": [
+								"pgadmission",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"admin",
+								"deleteCourse"
+							],
+							"query": [
+								{
+									"key": "courseId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"user@company.com\",\n    \"userName\":\"user\",\n    \"userMobileNumber\":\"8853421451\",\n    \"userPassword\":\"user\",\n    \"userRetypePassword\":\"user\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/user/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"user@company.com\",\n    \"userPassword\":\"user\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Cloud",
+			"item": [
+				{
+					"name": "User Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"user@company.com\",\n    \"userName\":\"user\",\n    \"userMobileNumber\":\"8853421451\",\n    \"userPassword\":\"user\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://pgadmission.herokuapp.com/user/signup",
+							"protocol": "https",
+							"host": [
+								"pgadmission",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "user@company.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "user",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://pgadmission.herokuapp.com/user/login",
+							"protocol": "https",
+							"host": [
+								"pgadmission",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Enroll",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"courseId\":\"1\",\n    \"firstName\":\"Harry\",\n    \"lastName\":\"Potter\",\n    \"email\":\"sdhananjay997@gmail.com\",\n    \"mobile\":\"8853421451\",\n    \"gender\":\"Male\",\n    \"fatherName\":\"James Potter\",\n    \"motherName\":\"Lily Potter\",\n    \"age\":\"22\",\n    \"hscName\":\"Xavier School\",\n    \"hscMarks\":\"80\",\n    \"eligibility\":\"Yes\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://pgadmission.herokuapp.com/user/enroll",
+							"protocol": "https",
+							"host": [
+								"pgadmission",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"user",
+								"enroll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User GetAllAppliedCourses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pgadmission.herokuapp.com/user/getAllAppliedCourses",
+							"protocol": "https",
+							"host": [
+								"pgadmission",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"user",
+								"getAllAppliedCourses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User GetAllInstitute",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pgadmission.herokuapp.com/user/getAllInstitutes",
+							"protocol": "https",
+							"host": [
+								"pgadmission",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"user",
+								"getAllInstitutes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User GetAllCourses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pgadmission.herokuapp.com/user/getAllCourses?instituteId=1",
+							"protocol": "https",
+							"host": [
+								"pgadmission",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"user",
+								"getAllCourses"
+							],
+							"query": [
+								{
+									"key": "instituteId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Institute",
+			"item": [
+				{
+					"name": "Add Institute",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"instituteName\" :\"KIIT Institute\",\n    \"instituteDescription\" : \"Great University to learn and grow.\",\n    \"instituteCity\" : \"Chennai\",\n    \"instituteState\" : \"Tamil Nadu\",\n    \"instituteEmail\" : \"kiit@Institute.com\",\n    \"instituteMobile\" : \"9334578342\",\n    \"nirfRank\" : \"29\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/admin/addInstitute",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"addInstitute"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Institutes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/admin/viewInstitutes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"viewInstitutes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Institute",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/admin/viewInstitute/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"viewInstitute",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Institute",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"instituteName\" :\"RK Institute\",\n    \"instituteDescription\" : \"Great University to learn and grow.\",\n    \"instituteCity\" : \"Chennai\",\n    \"instituteState\" : \"Lucknow\",\n    \"instituteEmail\" : \"rk@Institute.com\",\n    \"instituteMobile\" : \"9334578342\",\n    \"nirfRank\" : \"45\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/admin/editInstitute/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"editInstitute",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Institute",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/admin/deleteInstitute/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"deleteInstitute",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Courses",
+			"item": [
+				{
+					"name": "Add Course",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"instituteId\" : \"2\",\n    \"courseName\" : \"M.COM\",\n    \"courseDescription\" : \"Masters in Commerce\",\n    \"courseDuration\" : \"2 Years\",\n    \"courseTiming\" : \"8:00 am to 4:00 pm\",\n    \"courseStudentCount\" : \"200\",\n    \"courseAcademicYear\" : \"2021\",\n    \"courseRequiredPercentage\" : \"60\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/admin/addCourse",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"addCourse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/admin/viewCourses",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"viewCourses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Course",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/admin/viewCourse/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"viewCourse",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Course",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"courseName\" : \"M.COM(Master)\",\n    \"courseDescription\" : \"Masters in Commerce\",\n    \"courseDuration\" : \"3 Years\",\n    \"courseTiming\" : \"8:00 am to 4:00 pm\",\n    \"courseStudentCount\" : \"200\",\n    \"courseAcademicYear\" : \"2021\",\n    \"courseRequiredPercentage\" : \"65\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/admin/editCourse/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"editCourse",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Course",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/admin/deleteCourse/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"deleteCourse",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Admission",
+			"item": [
+				{
+					"name": "GetAllAdmissionRequest",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/admin/getAllAdmissionRequests",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"getAllAdmissionRequests"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admission Enroll",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\":\"2\",\n    \"courseId\":\"2\",\n    \"firstName\":\"Malfoy\",\n    \"lastName\":\"Malfoy\",\n    \"email\":\"malfoy997@gmail.com\",\n    \"mobile\":\"8853421444\",\n    \"gender\":\"Male\",\n    \"fatherName\":\"Malfoy Senior\",\n    \"motherName\":\"Mrs Malfoy Senior\",\n    \"age\":\"23\",\n    \"hscName\":\"Hogwarts\",\n    \"hscMarks\":\"80\",\n    \"eligibility\":\"Yes\",\n    \"houseNumber\":\"197\",\n    \"streetNumber\":\"123\",\n    \"areaName\":\"Eldeco\",\n    \"state\":\"Himachal Pradesh\",\n    \"pinCode\":\"226011\",\n    \"nationality\":\"Indian\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/user/enroll",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"enroll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AcceptAdmission",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/admin/acceptAdmission?admissionId=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"acceptAdmission"
+							],
+							"query": [
+								{
+									"key": "admissionId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DenyAdmission",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/admin/denyAdmission?admissionId=3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"denyAdmission"
+							],
+							"query": [
+								{
+									"key": "admissionId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllAcceptedAdmission",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/admin/getAllAcceptedAdmission",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"getAllAcceptedAdmission"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllDeniedAdmission",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/admin/getAllDeniedAdmission",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"getAllDeniedAdmission"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAdmissionById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/admin/getAdmission?admissionId=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"getAdmission"
+							],
+							"query": [
+								{
+									"key": "admissionId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditAdmission",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"courseId\":\"1\",\n    \"firstName\":\"Drako\",\n    \"lastName\":\"Malfoy\",\n    \"email\":\"malfoy997@gmail.com\",\n    \"mobile\":\"8853421444\",\n    \"gender\":\"Male\",\n    \"fatherName\":\"Malfoy Senior\",\n    \"motherName\":\"Mrs Malfoy Senior\",\n    \"age\":\"23\",\n    \"hscName\":\"Hogwarts\",\n    \"hscMarks\":\"80\",\n    \"eligibility\":\"Yes\",\n    \"houseNumber\":\"197\",\n    \"streetNumber\":\"123\",\n    \"areaName\":\"Eldeco\",\n    \"state\":\"Himachal Pradesh\",\n    \"pinCode\":\"226011\",\n    \"nationality\":\"Indian\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/admin/editAdmission?admissionId=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"editAdmission"
+							],
+							"query": [
+								{
+									"key": "admissionId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User GetAllAppliedAdmissionByStudent",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/user/getAllAppliedAdmissionByStudent?userId=2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"getAllAppliedAdmissionByStudent"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteAdmission",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/admin/deleteAdmission?admissionId=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"deleteAdmission"
+							],
+							"query": [
+								{
+									"key": "admissionId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AcceptAdmissionByStudent",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/user/acceptAdmissionByStudent?admissionId=1&userId=2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"acceptAdmissionByStudent"
+							],
+							"query": [
+								{
+									"key": "admissionId",
+									"value": "1"
+								},
+								{
+									"key": "userId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DenyAdmissionByStudent",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/user/denyAdmissionByStudent?admissionId=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"denyAdmissionByStudent"
+							],
+							"query": [
+								{
+									"key": "admissionId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAcceptedAdmissionByStudent",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/user/getAcceptedAdmissionByStudent?userId=2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"getAcceptedAdmissionByStudent"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetDeniedAdmissionByStudent",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/user/getDeniedAdmissionByStudent?userId=2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"getDeniedAdmissionByStudent"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Review",
+			"item": [
+				{
+					"name": "Add Review",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\":\"1\",\n    \"courseId\":\"2\",\n    \"message\":\"This course is very fantastic\",\n    \"starRating\":\"3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/user/addReview",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"addReview"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Review",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"message\":\"This course is Yuck\",\n    \"starRating\":\"3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/user/editReview/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"editReview",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Review",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/deleteReview/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"deleteReview",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetReviewsByCourseId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/getReviewsByCourseId/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getReviewsByCourseId",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetReviewByUserId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/getReviewByUserId/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getReviewByUserId",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
